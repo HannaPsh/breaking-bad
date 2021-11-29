@@ -4,6 +4,7 @@ let quote = document.getElementById("quote");
 let author = document.getElementById("author");
 let characters = document.getElementById("characters");
 let selectName = document.getElementById("selectName");
+let slideShowDiv = document.getElementById("slideShow")
 
 /*                            #################### Pictures  ####################                     */
 
@@ -19,6 +20,7 @@ async function fetchData(data) {
     console.log(dataCharacters);
 
     for (element of dataCharacters) {
+
       if (element.name == data[0].author) {
         characters.innerHTML = `<img src ="${this.element.img}">`;
       }
@@ -128,3 +130,4 @@ async function myFunction(event) {
       console.log(error);
     }
   }
+
